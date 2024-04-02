@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PassIn.Application.UseCases.Events.GetById;
 using PassIn.Application.UseCases.Events.Register;
+using PassIn.Application.UseCases.Events.RegisterAttendeeOnEvent;
 using PassIn.Communication.Requests;
 using PassIn.Communication.Responses;
 using PassIn.Exceptions;
 using PassIn.Infrastructure;
+using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
 
 namespace PassIn.Api.Controllers;
 
@@ -12,10 +14,10 @@ namespace PassIn.Api.Controllers;
 [ApiController]
 public class EventController : ControllerBase
 {
-    private readonly PassInDbContext _dbContext;
-    public EventController(PassInDbContext dbContext)
+    private readonly IEventsRepository _eventsRepository;
+    public EventController(IEventsRepository repository)
     {
-        _dbContext = dbContext;
+        _eventsRepository = repository;
     }
 
     [HttpPost]
@@ -23,21 +25,10 @@ public class EventController : ControllerBase
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> RegisterAsync([FromBody] RequestEventJson request)
     {
-		try
-		{
-            var useCase = new RegisterEventUseCase(_dbContext);
-            var response = await useCase.Execute(request);
+        var useCase = new RegisterEventUseCase(_eventsRepository);
+        var response = await useCase.Execute(request);
 
-            return Created(string.Empty, response);
-        }
-		catch (PassInException ex)
-		{
-			return BadRequest(new ResponseErrorJson(ex.Message));
-		}
-        catch
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorJson("Unknown Error."));
-        }
+        return Created(string.Empty, response);
     }
 
     [HttpGet]
@@ -46,20 +37,9 @@ public class EventController : ControllerBase
     [Route("{id}")]
     public async Task<IActionResult> GetById([FromRoute] Guid id)
     {
-        try
-        {
-            var useCase = new GetEventByIdUseCase(_dbContext);
-            var response = await useCase.Execute(id);
+        var useCase = new GetEventByIdUseCase(_eventsRepository);
+        var response = await useCase.Execute(id);
 
-            return Ok(response);
-        }
-        catch (PassInException ex)
-        {
-            return NotFound(new ResponseErrorJson(ex.Message));
-        }
-        catch
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorJson("Unknown Error."));
-        }
+        return Ok(response);
     }
 }
