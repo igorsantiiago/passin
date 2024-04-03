@@ -13,7 +13,7 @@ public class EventsRepository : IEventsRepository
     }
 
     public async Task<Event?> GetEventByIdAsync(Guid id)
-        => await _dbContext.Events.FirstOrDefaultAsync(x => x.Id == id);
+        => await _dbContext.Events.Include(e => e.Attendees).FirstOrDefaultAsync(x => x.Id == id);
 
     public async Task CreateEventAsync(Event eventEntity)
     {

@@ -35,4 +35,7 @@ public class AttendeesRepository : IAttendeesRepository
         await _dbContext.Attendees.AddAsync(attendee);
         await _dbContext.SaveChangesAsync();
     }
+
+    public async Task<Event?> GetAllAttendeesWithCheckInByEventId(Guid eventId)
+        => await _dbContext.Events.Include(e => e.Attendees).ThenInclude(attendee => attendee.CheckIn).FirstOrDefaultAsync(e => e.Id == eventId);
 }

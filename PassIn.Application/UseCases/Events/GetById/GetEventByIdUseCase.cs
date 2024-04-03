@@ -25,7 +25,7 @@ public class GetEventByIdUseCase
             Title = entityEvent.Title,
             Details = entityEvent.Details,
             MaximumAttendees = entityEvent.Maximum_Attendees,
-            AttendeesAmount = -1
-        };
+            AttendeesAmount = entityEvent.Attendees.Count
+            };
     }
 }
