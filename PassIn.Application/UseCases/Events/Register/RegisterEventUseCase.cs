@@ -1,10 +1,9 @@
 ﻿using FluentValidation.Results;
-using PassIn.Communication.Requests;
-using PassIn.Communication.Responses;
+using PassIn.Application.DTOs.Requests;
+using PassIn.Application.DTOs.Responses;
+using PassIn.Domain.Entities;
+using PassIn.Domain.Repositories.Interfaces;
 using PassIn.Exceptions;
-using PassIn.Infrastructure;
-using PassIn.Infrastructure.Entities;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
 
 namespace PassIn.Application.UseCases.Events.Register;
 

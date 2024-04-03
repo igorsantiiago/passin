@@ -1,4 +1,4 @@
-﻿namespace PassIn.Communication.Responses;
+﻿namespace PassIn.Application.DTOs.Responses;
 
 public class ResponseAttendeeRegisteredOnEvent
 {

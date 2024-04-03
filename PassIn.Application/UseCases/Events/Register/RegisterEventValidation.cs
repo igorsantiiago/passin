@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using PassIn.Communication.Requests;
+using PassIn.Application.DTOs.Requests;
 
 namespace PassIn.Application.UseCases.Events.Register;
 

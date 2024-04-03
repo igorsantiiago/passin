@@ -1,11 +1,11 @@
 ﻿using FluentValidation.Results;
-using PassIn.Communication.Requests;
-using PassIn.Communication.Responses;
+using PassIn.Application.DTOs.Requests;
+using PassIn.Application.DTOs.Responses;
+using PassIn.Domain.Entities;
+using PassIn.Domain.Repositories.Interfaces;
 using PassIn.Exceptions;
-using PassIn.Infrastructure.Entities;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
 
-namespace PassIn.Application.UseCases.Events.RegisterAttendeeOnEvent;
+namespace PassIn.Application.UseCases.Attendees.RegisterAttendeeOnEvent;
 
 public class RegisterAttendeeOnEventUseCase
 {
@@ -23,7 +23,7 @@ public class RegisterAttendeeOnEventUseCase
             throw new NotFoundException("An event with this Id was not found.");
 
         ValidationResult result = _validation.Validate(request);
-        if(!result.IsValid)
+        if (!result.IsValid)
             throw new ValidationErrorException(result.ToString());
 
         var attendeeAlreadyRegistered =
@@ -38,7 +38,7 @@ public class RegisterAttendeeOnEventUseCase
 
         var entityAttendee = new Attendee
         {
-            Name = request.Email,
+            Name = request.Name,
             Email = request.Email,
             Event_Id = eventId,
             Created_At = DateOnly.FromDateTime(DateTime.UtcNow)

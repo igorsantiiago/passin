@@ -1,4 +1,4 @@
-﻿namespace PassIn.Communication.Requests;
+﻿namespace PassIn.Application.DTOs.Requests;
 
 public class RequestRegisterAttendeesEventJson
 {

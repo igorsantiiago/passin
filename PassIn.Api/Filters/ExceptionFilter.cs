@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using PassIn.Communication.Responses;
+using PassIn.Application.DTOs.Responses;
 using PassIn.Exceptions;
 using System.Net;
 

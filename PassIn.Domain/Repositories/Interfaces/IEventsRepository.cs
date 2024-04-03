@@ -1,6 +1,6 @@
-﻿using PassIn.Infrastructure.Entities;
+﻿using PassIn.Domain.Entities;
 
-namespace PassIn.Infrastructure.Repositories.UseCases.Interfaces;
+namespace PassIn.Domain.Repositories.Interfaces;
 
 public interface IEventsRepository
 {

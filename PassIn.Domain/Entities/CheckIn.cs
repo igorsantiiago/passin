@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PassIn.Infrastructure.Entities;
+namespace PassIn.Domain.Entities;
 
 public class CheckIn
 {

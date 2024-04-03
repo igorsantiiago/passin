@@ -1,7 +1,7 @@
 using PassIn.Api.Filters;
+using PassIn.Domain.Repositories.Interfaces;
 using PassIn.Infrastructure;
 using PassIn.Infrastructure.Repositories.UseCases;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

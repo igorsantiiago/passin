@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using PassIn.Communication.Requests;
+using PassIn.Application.DTOs.Requests;
 
-namespace PassIn.Application.UseCases.Events.RegisterAttendeeOnEvent;
+namespace PassIn.Application.UseCases.Attendees.RegisterAttendeeOnEvent;
 
 public class RegisterAttendeeOnEventValidation : AbstractValidator<RequestRegisterAttendeesEventJson>
 {

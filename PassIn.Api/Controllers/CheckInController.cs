@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PassIn.Application.DTOs.Responses;
 using PassIn.Application.UseCases.CheckIns.RegisterAttendeeCheckIn;
-using PassIn.Communication.Responses;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
+using PassIn.Domain.Repositories.Interfaces;
 
 namespace PassIn.Api.Controllers;
 

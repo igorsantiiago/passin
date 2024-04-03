@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PassIn.Infrastructure.Entities;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
+using PassIn.Domain.Entities;
+using PassIn.Domain.Repositories.Interfaces;
 
 namespace PassIn.Infrastructure.Repositories.UseCases;
 

@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PassIn.Application.DTOs.Requests;
+using PassIn.Application.DTOs.Responses;
 using PassIn.Application.UseCases.Events.GetById;
 using PassIn.Application.UseCases.Events.Register;
-using PassIn.Application.UseCases.Events.RegisterAttendeeOnEvent;
-using PassIn.Communication.Requests;
-using PassIn.Communication.Responses;
-using PassIn.Exceptions;
-using PassIn.Infrastructure;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
+using PassIn.Domain.Repositories.Interfaces;
 
 namespace PassIn.Api.Controllers;
 

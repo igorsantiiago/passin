@@ -1,10 +1,8 @@
-﻿namespace PassIn.Communication.Responses;
+﻿namespace PassIn.Application.DTOs.Requests;
 
-public class ResponseEventJson
+public class RequestEventJson
 {
-    public Guid Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Details { get; set; } = string.Empty;
     public int MaximumAttendees { get; set; }
-    public int AttendeesAmount { get; set; }
 }

@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PassIn.Application.DTOs.Requests;
+using PassIn.Application.DTOs.Responses;
 using PassIn.Application.UseCases.Attendees.GetAllAttendeeByEventId;
-using PassIn.Application.UseCases.Events.RegisterAttendeeOnEvent;
-using PassIn.Communication.Requests;
-using PassIn.Communication.Responses;
-using PassIn.Infrastructure;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
+using PassIn.Application.UseCases.Attendees.RegisterAttendeeOnEvent;
+using PassIn.Domain.Repositories.Interfaces;
 
 namespace PassIn.Api.Controllers;
 
@@ -24,7 +23,7 @@ public class AttendeesController : ControllerBase
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status409Conflict)]
-    [Route("event/{eventId}")]
+    [Route("event/register/{eventId}")]
     public async Task<IActionResult> RegisterAttendeer([FromBody] RequestRegisterAttendeesEventJson request, [FromRoute] Guid eventId)
     {
         var useCase = new RegisterAttendeeOnEventUseCase(_attendeesRepository);

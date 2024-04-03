@@ -1,7 +1,7 @@
-﻿using PassIn.Communication.Responses;
+﻿using PassIn.Application.DTOs.Responses;
+using PassIn.Domain.Entities;
+using PassIn.Domain.Repositories.Interfaces;
 using PassIn.Exceptions;
-using PassIn.Infrastructure.Entities;
-using PassIn.Infrastructure.Repositories.UseCases.Interfaces;
 
 namespace PassIn.Application.UseCases.CheckIns.RegisterAttendeeCheckIn;
 
