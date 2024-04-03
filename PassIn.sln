@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassIn.Exceptions", "PassIn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassIn.Infrastructure", "PassIn.Infrastructure\PassIn.Infrastructure.csproj", "{E3251886-8D0F-41BE-9D8D-940BFABA9CDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassIn.Domain", "PassIn.Domain\PassIn.Domain.csproj", "{E66A5AFD-92AA-49F4-92C9-1454477D7052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassIn.Domain", "PassIn.Domain\PassIn.Domain.csproj", "{E66A5AFD-92AA-49F4-92C9-1454477D7052}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassIn.Tests", "PassIn.Tests\PassIn.Tests.csproj", "{489D5E0E-F3E8-4DA4-AF6B-C3AF204E7619}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E66A5AFD-92AA-49F4-92C9-1454477D7052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66A5AFD-92AA-49F4-92C9-1454477D7052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66A5AFD-92AA-49F4-92C9-1454477D7052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489D5E0E-F3E8-4DA4-AF6B-C3AF204E7619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489D5E0E-F3E8-4DA4-AF6B-C3AF204E7619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489D5E0E-F3E8-4DA4-AF6B-C3AF204E7619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489D5E0E-F3E8-4DA4-AF6B-C3AF204E7619}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
