@@ -8,6 +8,12 @@ Durante o desenvolvimento dessa API, foram aplicados importantes conceitos do de
 - Exceptions personalizadas utilizando filtro
 - Organização de projeto
 
+Além disso, cada aula eram passados desáfios para aqueles que queriam ir mais afundo no projeto e implementar funcionalidades a mais. Entre eles apliquei conceitos como:
+
+- Reorganização da Estrutura DDD, criando a camada de Domain e substituindo os Requests e Responses da camada de Communication para camada de Application
+- Utilização do Repository Pattern
+- Adicionando testes de unidade no projeto
+
 ## 💻 Tecnologias
 
 <div style="display: inline_block">
